@@ -1,0 +1,16 @@
+/* Contact */
+
+#contact {
+  overflow: hidden;
+  padding-bottom: 0;
+}
+
+#contact .box {
+  transition: transform 1s ease;
+  transform: translateY(0);
+  position: relative;
+}
+
+#contact.inactive .box {
+  transform: translateY(100%);
+}
