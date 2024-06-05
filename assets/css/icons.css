@@ -1,0 +1,17 @@
+/* Icons */
+ul.icons {
+  cursor: default;
+}
+
+ul.icons li {
+  display: inline-block;
+}
+
+ul.icons a {
+  display: inline-block;
+  width: 2em;
+  height: 2em;
+  line-height: 2em;
+  text-align: center;
+  border: 0;
+}

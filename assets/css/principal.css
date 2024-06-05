@@ -1,0 +1,121 @@
+/* Main */
+
+.main {
+  display: flex;
+  position: relative;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+.main>.content {
+  width: 45em;
+  max-width: calc(100% - 4em);
+  margin: 0 auto;
+}
+
+.main>.content> :last-child {
+  margin-bottom: 0;
+}
+
+.main.fullscreen {
+  min-height: 100%;
+}
+
+/* style 1 */
+.main.style1 {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 3em 0 3em 0;
+}
+
+.main.style1 h2 {
+  font-size: 4.25em;
+  line-height: 1em;
+}
+
+.main.style1>.content {
+  transition: opacity 1s ease;
+  transform: translateZ(0);
+  opacity: 1.0;
+  margin: 0;
+}
+
+.main.style1.inactive>.content {
+  opacity: 0;
+}
+
+/* style 2 */
+.main.style2 {
+  align-items: center;
+  justify-content: center;
+  padding: 1em 0 1em 0;
+  overflow: hidden;
+}
+
+.main.style2>.content {
+  transition: transform 1s ease;
+  transform: translateZ(0);
+  position: relative;
+  width: 35%;
+  margin: 0;
+}
+
+.main.style2.left {
+  justify-content: flex-start;
+}
+
+.main.style2.right {
+  justify-content: flex-end;
+}
+
+.main.style2.inactive.left>.content {
+  transform: translateX(-100%);
+}
+
+.main.style2.inactive.right>.content {
+  transform: translateX(100%);
+}
+
+/* style 3 */
+.main.style3 {
+  text-align: center;
+  padding: 1em 0 1em 0;
+}
+
+.main.style3 .content>header {
+  margin-bottom: 2em;
+}
+
+.main.style3.primary {
+  background: #ffffff;
+}
+
+.main.style3.secondary {
+  background: #f5f6f7;
+}
+
+/* dark */
+.main.dark {
+  color: #ffffff;
+}
+
+.main.dark a {
+  color: inherit;
+}
+
+.main.dark .button.style2 {
+  border-color: #ffffff;
+}
+
+.main.dark .button.style2:hover {
+  background-color: rgba(255, 255, 255, 0.125);
+}
+
+.main.dark .button.style2:active {
+  background-color: rgba(255, 255, 255, 0.25);
+}
+
+.main.dark .button.style2.down {
+  background-image: url("../../images/style_images/dark-arrow.svg");
+}

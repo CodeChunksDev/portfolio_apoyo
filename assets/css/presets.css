@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,900");
+@import url("fontawesome-all.min.css");
+@import url('./fonts.css');
+
+/* Basic */
+@-ms-viewport {
+  width: device-width;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  font-family: global_font;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+html {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+body {
+  line-height: 1;
+  background: #ffffff;
+  height: 100%;
+  min-width: 320px;
+  padding-top: 3em;
+}
+
+body.is-preload *, body.is-preload *:before, body.is-preload *:after {
+  animation: none !important;
+  transition: none !important;
+}
+
+body {
+  text-decoration: none;
+}
+
+body:before {
+  animation: spinner-show 1.5s 1 0.25s ease forwards, spinner-hide 0.25s ease-in-out forwards !important;
+  transform-origin: 50% 50%;
+  font-family: 'fontawesome';
+  font-style: normal;
+  font-weight: normal;
+  text-transform: none !important;
+  color: #e5e6e7;
+  content: '\f1ce';
+  cursor: default;
+  display: block;
+  font-size: 2em;
+  height: 2em;
+  left: 50%;
+  line-height: 2em;
+  margin: -1em 0 0 -1em;
+  opacity: 0;
+  position: fixed;
+  text-align: center;
+  top: 50%;
+  width: 2em;
+  z-index: -1;
+}
+
+body:after {
+  animation: overlay-hide 1.5s ease-in forwards !important;
+  background: #ffffff;
+  content: '';
+  display: block;
+  height: 100%;
+  left: 0;
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: -1;
+}
+
+body.is-preload:before {
+  animation: spinner-show 1.5s 1 0.25s ease forwards, spinner-rotate 0.75s infinite linear !important;
+  z-index: 100001;
+}
+
+body.is-preload:after {
+  animation: none !important;
+  opacity: 1;
+  z-index: 100000;
+}
+
+body.is-touch .main {
+  background-attachment: scroll !important;
+}
+
+article,
+footer,
+header,
+nav {
+  display: block;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 900;
+  /* color: inherit; */
+  letter-spacing: -0.0325em;
+}
+
+h2 {
+  font-size: 2.25em;
+  line-height: 1.25em;
+  letter-spacing: -0.05em;
+}
+
+a {
+  transition: color 0.2s ease-in-out;
+  color: #98c593;
+}
+
+p, ul, ol {
+  margin-bottom: 1em;
+}

@@ -1,0 +1,32 @@
+/* Icon */
+
+.icon {
+  position: relative;
+}
+
+.icon:before {
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  line-height: 1;
+  text-transform: none !important;
+  font-family: 'fonawesome';
+  font-weight: 400;
+}
+
+.icon:before {
+  line-height: inherit;
+}
+
+.icon>.label {
+  display: none;
+}
+
+.icon.solid:before {
+  font-weight: 900;
+}
+
+.icon.brands:before {
+  font-family: 'fontawesome';
+}
